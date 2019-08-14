@@ -40,3 +40,26 @@ Before you get started, make sure you have the following software installed on y
 - public/ contains static assets for the client-side
 - build/ after you build the project, contains the transpiled code from src/ and public/ that will be viewed on the production site
 - server/ contains the Express App
+
+## Authors: 
+
+Frontend UI, server routing, and database queries:
+
+Kyle Henderson
+
+    https://github.com/kylethenderson
+
+Michael Ferlis
+
+    https://github.com/michaelferlis
+
+Kaeti Gust
+
+    https://github.com/KaetiG
+
+Weizhen Wang
+
+    https://github.com/weizhenw
+
+
+Prime Academy Staff - Register, Login, and Authentication
