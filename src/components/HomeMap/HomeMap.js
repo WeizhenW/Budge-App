@@ -25,19 +25,20 @@ class HomeMap extends Component {
 
     componentDidMount() {
         this.getVenues();
-        setTimeout(this.setPosition, 1500);
+        this.checkUserLocation();
+        // setTimeout(this.setPosition, 1500);
     }
 
-    setPosition = () => {
-        // console.log('set position manually');
-        // if there is no location, set manually
-        this.setUserLocation({
-            coords: {
-                latitude: 44.9781305,
-                longitude: -93.263257,
-            }
-        })
-    }
+    // setPosition = () => {
+    //     // console.log('set position manually');
+    //     // if there is no location, set manually
+    //     this.setUserLocation({
+    //         coords: {
+    //             latitude: 44.9781305,
+    //             longitude: -93.263257,
+    //         }
+    //     })
+    // }
 
     getVenues = () => {
         this.props.dispatch({ type: 'FETCH_VENUE_LIST' })
@@ -46,7 +47,7 @@ class HomeMap extends Component {
     // if user refreshes, redux location is blown away, so get it again
     // move user location into cookie sessions later
     checkUserLocation = () => {
-        if (!this.props.user.lat) {
+        if (!this.props.user.latitude) {
             navigator.geolocation.getCurrentPosition(this.setUserLocation, this.setPositionError)
         }
     }
