@@ -21,7 +21,7 @@ router.post('/accept-offer', rejectUnauthenticated, (req, res) => {
             //         body: `Your offer has been accepted! View it: http://thebudgeapp.herokuapp.com/buyer-confirm?offerId=${req.body.offerId}`,
             //         from: '+16125025504',
             //         to: `+1${buyerPhone}`
-            //     })
+            //     })   
             //     .then(message => console.log(message.sid));
             res.sendStatus(200);
         })

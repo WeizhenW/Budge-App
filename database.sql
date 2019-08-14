@@ -61,7 +61,8 @@ CREATE TABLE "offer" (
 	"waitlist_id" INT REFERENCES "waitlist",
 	"buyer_id" INT REFERENCES "user",
 	"offer_price" INT,
-    "status_code" INT REFERENCES "offer_status"
+    "status_code" INT REFERENCES "offer_status",
+    "status_time" TIMESTAMP
 );
 
 --customer rating table
